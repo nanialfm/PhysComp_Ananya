@@ -5,14 +5,17 @@ vpinMode(15, INPUT_PULLUP);  // Button
   pinMode(6, OUTPUT);         // The Buzzer
 }
 
-void loop() {
+void loop() 
+{
 
-  if (digitalRead(15) == LOW || analogRead(7) > 2000) {
+  if (digitalRead(15) == LOW 
+    analogRead(7) > 2000) 
+  {
 
     digitalWrite(4, HIGH);
     digitalWrite(5, HIGH);
 
-    // Happy Birthday
+    // Happy Birthday from online reasourse
     tone(6, 262, 200); delay(250);
     tone(6, 262, 200); delay(250);
     tone(6, 294, 400); delay(450);
@@ -42,6 +45,6 @@ void loop() {
     tone(6, 392, 400); delay(450);
     tone(6, 349, 900); delay(950);
 
-    noTone(6);
+    noTone(6); //off
   }
 }
